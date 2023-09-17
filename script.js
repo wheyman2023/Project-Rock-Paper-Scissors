@@ -54,12 +54,22 @@ function getComputerChoice() {
   const choice = ["Rock", "Paper", "Scissors"]; // array for computer's choice
   return choice[Math.floor(Math.random() * choice.length)]; // return the random choices
 }
-// function getUserChoice() {
-//   const userChoice = "Rock";
-//   return console.log(userChoice);
+
+// let playerSelection = prompt("Choose: Rock, Paper, Scissors"); // for user prompt
+// let computerSelection = getComputerChoice();
+
+// function game() {
+//   for (let i = 0; i < 5; i++) {
+//     return playRound(" ", " ");
+//   }
 // }
 
-const playerSelection = prompt("Choose: Rock, Paper, Scissors"); // for prompt user
-// const playerSelection = "Rock";
-const computerSelection = getComputerChoice();
-console.log(playRound(playerSelection, computerSelection));
+function game() {
+  for (let i = 0; i <= 5; i++) {
+    let playerSelection = prompt("Choose: Rock, Paper, Scissors"); // for user prompt
+    let computerSelection = getComputerChoice();
+    console.log(playRound(playerSelection, computerSelection));
+  }
+}
+
+game();
